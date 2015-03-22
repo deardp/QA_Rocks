@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Home</title>
+  <meta name="description" content="free website template" />
+  <meta name="keywords" content="enter your keywords here" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=9" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+   <script type="text/javascript" src="js/image_slide.js"></script>
+  <script>
+  
+  function validate()
+  {
+	  var form_id = document.getElementById('myform')
+	  var email = form_id.elements["email"];
+	  var pass = form_id.elements["pass"];
+     
+	  if (email.value.length==0) {
+	      alert('Error: Email should not be blank');
+	      email.focus;
+	      return false;
+	  }
+	  if(pass.value.length==0) {
+		  alert('Error: Password should not be blank');
+	      pass.focus;
+	      return false;
+	  }
+  }
+  </script>
+ 
+</head>
+
+<body>
+
+  <div id="main">
+    <div id="header">
+	  <div id="banner">
+	    <div id="welcome">
+	      <h1>The Hope</h1>
+	    </div><!--close welcome-->
+	    <div id="menubar">
+          <ul id="menu">
+            <li class="current"><a href="index.html">Home</a></li>
+            <li ><a href="ourwork.html">Our Work</a></li>
+            <li><a href="testimonials.html">News&Events</a></li> 
+            <li><a href="projects.html">Ways To Donate</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div><!--close menubar-->	  
+	  </div><!--close banner-->	
+    </div><!--close header-->	
+    
+	<div id="site_content">		
+
+      <div class="slideshow">  
+		<ul class="slideshow">
+          <li class="show"><img width="900" height="250" src="images/home_1.jpg" alt="&quot;....a feeling of expectation and desire for a certain thing to happen.&quot;" /></li>
+          <li><img width="900" height="250" src="image/new_one.jpg" alt="&quot;....a feeling of expectation and desire for a certain thing to happen.&quot;" /></li>
+          <li><img width="900" height="250" src="image/d3.jpg" alt="&quot;....a feeling of expectation and desire for a certain thing to happen.&quot;" /></li>
+          <li><img width="900" height="250" src="image/help1.png" alt="&quot;....a feeling of expectation and desire for a certain thing to happen.&quot;" /></li>
+          <li><img width="900" height="250" src="image/jfk.jpg" alt="&quot;....a feeling of expectation and desire for a certain thing to happen.&quot;" /></li>
+          <li><img width="900" height="250" src="image/theresa.jpg" alt="&quot;....a feeling of expectation and desire for a certain thing to happen.&quot;" /></li>
+        </ul> 
+      </div><!--close slideshow-->		
+	  <form id="myform" method="post" onsubmit="return validate();" action="jsp/reguser.jsp">
+	  <div class="ourwork">
+	    <h3>Login</h3>
+		<p>Email:<br/><input type="text" name="email" value="" placeholder="example@domain.com"></input></p>
+		<p>Password:<br/><input type="password" name="pass" value=""></input></p><p>New User? <a href="jsp/userregistration.jsp">Register Here</a></p>
+		<div class="more">
+		<input type="submit" value="Submit"/>
+		 
+		</div><!--close more-->      
+	  </div><!--close ourwork-->
+	  </form>
+	  <div class="testimonials">
+	    <h3>Ways To Donate</h3>
+		<p> 
+		By becoming a Hope Champion, You can join the thousands of people 
+		who support the Hope with a consistent and reliable source of funding to help 
+		those in need.</p>	  
+		<div class="more">
+		  <a href="jsp/donationform.jsp">Donate</a>
+		</div><!--close more-->        
+	  </div><!--close testimonials-->	  
+	 <!--   <div class="projects"> -->
+	  <div class="projects">
+	    <h3>Training</h3>
+		<p>The Hope offers a wide variety of classes that 
+		meet the needs of the general public, workplaces, schools and organizations.
+		Click Training to see more informaiton. 
+		</p>	  
+		<div class="more">
+		  <a href="#">Read more</a>
+		</div><!--close more-->        
+	  </div><!--close projects-->		 
+	 
+	  <div id="content">
+        <div class="content_item">
+		  <h1>Welcome To The Hope</h1> 
+          <p>The Hope, through its strong network of volunteers, donors and partners, is always there in times of need. We aspire to turn compassion into action so that...
+
+...all people affected by disaster across the country and around the world receive care, shelter and hope;
+
+...our communities are ready and prepared for disasters;
+
+...everyone in our country has access to safe, lifesaving blood and blood products;
+
+...all members of our armed services and their families find support and comfort whenever needed; and
+
+...in an emergency, there are always trained individuals nearby, ready to use their skills to save lives.</p>   				  
+		</div><!--close content_item-->
+      </div><!--close content-->   
+	
+	</div><!--close site_content--> 
+ 
+  </div><!--close main-->
+  
+  <div id="footer_container">
+    <div id="footer">
+	 Website dedicated to <u><a href="#">Rocking Ladies</a></u>
+    </div><!--close footer-->  
+  </div><!--close footer_container-->  
+  
+</body>
+</html>

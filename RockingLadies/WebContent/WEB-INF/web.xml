@@ -9,4 +9,28 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <resource-ref>
+    <description>JDBC</description>
+    <res-ref-name>jdbc/housewife</res-ref-name>
+    <res-type>javax.sql.DataSource</res-type>
+    <res-auth>Container</res-auth>
+  </resource-ref>
+  <servlet>
+    <servlet-name>TomcatJDBC</servlet-name>
+    <servlet-class>TomcatServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TomcatJDBC</servlet-name>
+    <url-pattern>/TomcatJDBC</url-pattern>
+  </servlet-mapping>
+  <servlet>
+<servlet-name>ServletAdaptor</servlet-name>
+<servlet-class>
+com.sun.jersey.server.impl.container.servlet.ServletAdaptor</servlet-class>
+<load-on-startup>1</load-on-startup>
+</servlet>
+<servlet-mapping>
+<servlet-name>ServletAdaptor</servlet-name>
+<url-pattern>/REST/*</url-pattern>
+</servlet-mapping>
 </web-app>
